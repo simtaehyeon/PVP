@@ -1,0 +1,14 @@
+{
+  "key.category.pvp_practice.main": "PVP 연습",
+  "key.pvp_practice.open_menu": "PVP 연습 메뉴 열기",
+  "screen.pvp_practice.title": "PVP 연습",
+  "screen.pvp_practice.mode": "게임 모드 선택",
+  "screen.pvp_practice.weapon": "무기 선택",
+  "screen.pvp_practice.difficulty": "AI 난이도",
+  "screen.pvp_practice.selection": "선택됨: %s | %s | %s",
+  "screen.pvp_practice.start": "연습 시작",
+  "screen.pvp_practice.not_ready": "현재는 메뉴 프로토타입이야. 실제 전투와 AI는 아직 구현되지 않았어.",
+  "screen.pvp_practice.material": "무기 재질 선택",
+  "screen.pvp_practice.custom_weapon_label": "원하는 무기 직접 입력",
+  "screen.pvp_practice.custom_weapon": "예: 철 검, 돌 도끼"
+}

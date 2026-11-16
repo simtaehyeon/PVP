@@ -11,12 +11,14 @@
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
-    "main": ["dev.simtaehyeon.pvppractice.PvpPracticeMod"]
+    "main": ["dev.simtaehyeon.pvppractice.PvpPracticeMod"],
+    "client": ["dev.simtaehyeon.pvppractice.PvpPracticeClient"]
   },
   "depends": {
     "fabricloader": ">=0.20.1",
     "minecraft": "26.3",
     "java": ">=25",
-    "fabric-api": "*"
+    "fabric-api": "*",
+    "fabric-key-mapping-api-v1": "*"
   }
 }

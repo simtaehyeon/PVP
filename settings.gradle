@@ -7,7 +7,9 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    // Fabric Loom adds its own remapped-mod repository during plugin setup.
+    // PREFER_PROJECT allows that repository while keeping these defaults available.
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         maven { url = 'https://maven.fabricmc.net/' }
         mavenCentral()
