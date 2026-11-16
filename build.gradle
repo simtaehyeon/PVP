@@ -16,9 +16,11 @@ dependencies {
 }
 
 loom {
+    splitEnvironmentSourceSets()
     mods {
         "pvp_practice" {
             sourceSet sourceSets.main
+            sourceSet sourceSets.client
         }
     }
 }
