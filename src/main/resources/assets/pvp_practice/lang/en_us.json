@@ -1,0 +1,11 @@
+{
+  "key.category.pvp_practice.main": "PVP Practice",
+  "key.pvp_practice.open_menu": "Open PVP Practice Menu",
+  "screen.pvp_practice.title": "PVP Practice",
+  "screen.pvp_practice.mode": "Choose a mode",
+  "screen.pvp_practice.weapon": "Choose a weapon",
+  "screen.pvp_practice.difficulty": "AI difficulty",
+  "screen.pvp_practice.selection": "Selected: %s | %s | %s",
+  "screen.pvp_practice.start": "Start practice",
+  "screen.pvp_practice.not_ready": "Menu prototype only: actual matches and AI are not implemented yet."
+}
