@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "pvp_practice",
+  "version": "${version}",
+  "name": "PVP Practice",
+  "description": "Practice PvP against AI and in team matches.",
+  "authors": ["simtaehyeon"],
+  "contact": {
+    "sources": "https://github.com/simtaehyeon/PVP"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.simtaehyeon.pvppractice.PvpPracticeMod"]
+  },
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
