@@ -13,6 +13,7 @@ public final class PracticeMenuScreen extends Screen {
     private int selectedMode = 0;
     private int selectedWeapon = 0;
     private int selectedDifficulty = 1;
+    private boolean showNotReady;
 
     public PracticeMenuScreen() {
         super(Component.translatable("screen.pvp_practice.title"));
@@ -47,7 +48,7 @@ public final class PracticeMenuScreen extends Screen {
         }
 
         addRenderableWidget(Button.builder(Component.translatable("screen.pvp_practice.start"),
-                        b -> showNotReadyMessage())
+                        b -> showNotReady = true)
                 .bounds(center - 100, 258, 200, 28).build());
         addRenderableWidget(Button.builder(Component.translatable("gui.back"),
                         b -> onClose())
@@ -81,13 +82,6 @@ public final class PracticeMenuScreen extends Screen {
         rebuildWidgets();
     }
 
-    private void showNotReadyMessage() {
-        if (minecraft != null && minecraft.player != null) {
-            minecraft.gui.setOverlayMessage(
-                    Component.translatable("screen.pvp_practice.not_ready"), false);
-        }
-    }
-
     @Override
     public void extractRenderState(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
         super.extractRenderState(graphics, mouseX, mouseY, partialTick);
@@ -104,6 +98,10 @@ public final class PracticeMenuScreen extends Screen {
                 Component.translatable("screen.pvp_practice.selection",
                         MODES[selectedMode], WEAPONS[selectedWeapon], DIFFICULTIES[selectedDifficulty]),
                 center, 232, 0xFFA0A0A0);
+        if (showNotReady) {
+            graphics.centeredText(font, Component.translatable("screen.pvp_practice.not_ready"),
+                    center, 330, 0xFFFF8080);
+        }
     }
 
     @Override
