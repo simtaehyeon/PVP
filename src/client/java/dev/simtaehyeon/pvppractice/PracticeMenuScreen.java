@@ -106,9 +106,6 @@ public final class PracticeMenuScreen extends Screen {
                 center, 232, 0xA0A0A0);
     }
 
-    private int thirty() {
-        return 30;
-    }
 
     @Override
     public boolean isPauseScreen() {
