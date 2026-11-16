@@ -21,8 +21,8 @@ public final class PvpPracticeClient implements ClientModInitializer {
     public void onInitializeClient() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (OPEN_MENU.consumeClick()) {
-                if (client.player != null && client.screen == null) {
-                    client.setScreen(new PracticeMenuScreen());
+                if (client.player != null && client.gui.screen() == null) {
+                    client.gui.setScreen(new PracticeMenuScreen());
                 }
             }
         });
