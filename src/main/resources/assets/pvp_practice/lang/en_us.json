@@ -7,5 +7,8 @@
   "screen.pvp_practice.difficulty": "AI difficulty",
   "screen.pvp_practice.selection": "Selected: %s | %s | %s",
   "screen.pvp_practice.start": "Start practice",
-  "screen.pvp_practice.not_ready": "Menu prototype only: actual matches and AI are not implemented yet."
+  "screen.pvp_practice.not_ready": "Menu prototype only: actual matches and AI are not implemented yet.",
+  "screen.pvp_practice.material": "Choose weapon material",
+  "screen.pvp_practice.custom_weapon_label": "Enter a custom weapon",
+  "screen.pvp_practice.custom_weapon": "Example: Iron Sword, Stone Axe"
 }
