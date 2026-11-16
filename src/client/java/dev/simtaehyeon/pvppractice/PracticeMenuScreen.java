@@ -93,7 +93,7 @@ public final class PracticeMenuScreen extends Screen {
         super.render(graphics, mouseX, mouseY, partialTick);
 
         int center = this.width / 2;
-        graphics.drawCenteredString(font, title, center,  thirty(), 0xFFFFFF);
+        graphics.drawCenteredString(font, title, center, 30, 0xFFFFFF);
         graphics.drawCenteredString(font, Component.translatable("screen.pvp_practice.mode"),
                 center, 58, 0xE0E0E0);
         graphics.drawCenteredString(font, Component.translatable("screen.pvp_practice.weapon"),
