@@ -1,6 +1,6 @@
 package dev.simtaehyeon.pvppractice;
 
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -83,29 +83,28 @@ public final class PracticeMenuScreen extends Screen {
 
     private void showNotReadyMessage() {
         if (minecraft != null && minecraft.player != null) {
-            minecraft.player.displayClientMessage(
+            minecraft.gui.setOverlayMessage(
                     Component.translatable("screen.pvp_practice.not_ready"), false);
         }
     }
 
     @Override
-    public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
-        super.render(graphics, mouseX, mouseY, partialTick);
+    public void extractRenderState(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
+        super.extractRenderState(graphics, mouseX, mouseY, partialTick);
 
         int center = this.width / 2;
-        graphics.drawCenteredString(font, title, center, 30, 0xFFFFFF);
-        graphics.drawCenteredString(font, Component.translatable("screen.pvp_practice.mode"),
-                center, 58, 0xE0E0E0);
-        graphics.drawCenteredString(font, Component.translatable("screen.pvp_practice.weapon"),
-                center, 115, 0xE0E0E0);
-        graphics.drawCenteredString(font, Component.translatable("screen.pvp_practice.difficulty"),
-                center, 172, 0xE0E0E0);
-        graphics.drawCenteredString(font,
+        graphics.centeredText(font, title, center, 30, 0xFFFFFFFF);
+        graphics.centeredText(font, Component.translatable("screen.pvp_practice.mode"),
+                center, 58, 0xFFE0E0E0);
+        graphics.centeredText(font, Component.translatable("screen.pvp_practice.weapon"),
+                center, 115, 0xFFE0E0E0);
+        graphics.centeredText(font, Component.translatable("screen.pvp_practice.difficulty"),
+                center, 172, 0xFFE0E0E0);
+        graphics.centeredText(font,
                 Component.translatable("screen.pvp_practice.selection",
                         MODES[selectedMode], WEAPONS[selectedWeapon], DIFFICULTIES[selectedDifficulty]),
-                center, 232, 0xA0A0A0);
+                center, 232, 0xFFA0A0A0);
     }
-
 
     @Override
     public boolean isPauseScreen() {
